@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Landing Page</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Image">
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere laudantium nihil excepturi aut
+            voluptate temporibus nemo eos optio sunt provident aliquam. A debitis fugit, pariatur tenetur architecto
+            modi consectetur.</p>
+        <button class="apply" id="open">Apply Now</button>
+    </header>
+
+    <div class="container" id="home">
+        <h1>HOME</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus dignissimos tenetur blanditiis
+            architecto, vero eos odit. Dignissimos, voluptatibus quidem? Quos odio natus repudiandae cum dicta quas
+            voluptatem ea nulla.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium mollitia eius veniam tempore natus rerum
+            ex nemo reprehenderit nobis consequatur beatae quia minus a, doloremque iure nisi obcaecati? Laborum,
+            magnam.</p>
+
+        <h2>More Information</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem explicabo aliquam quia
+            reiciendis beatae quam ducimus et obcaecati dolor ullam sed minus dolorum vero, non natus. Expedita,
+            voluptatem blanditiis!</p>
+    </div>
+   <div class="about" id="about">
+       <h1>ABOUT</h1>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum adipisci <br> tenetur sapiente eos, expedita veniam architecto doloremque, modi reiciendis impedit natus cum ea eius ducimus nostrum minus exercitationem. Ullam, debitis.</p>
+       
+       
+       <h2>More Information</h2>
+       <h3>you can find latest news here.</h3>
+
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fugiat quos dicta repellat suscipit expedita unde reiciendis incidunt obcaecati <br> quasi voluptatem harum a consequuntur dolores saepe architecto, recusandae vel ullam!</p>
+   </div>
+
+   <div class="syllabus" id="syllabus">
+        <h1>SYLLABUS</h1>
+        <h3>you can find best courses here <a href="#">Read More</a></h3><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aut culpa illo et, officia temporibus br molestiae veniam quibusdam accusamus ex eum vel a doloribus optio, porro non laboriosam? Non, atque!</p><br>
+        <h2>Syllabus</h2>   
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+            <li>Project 4</li>
+        </ul>
+   </div>
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Apply</h3>
+            </div>
+            <div class="modal-content">
+                <p>To sign up for classes please submit this form.</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="name" placeholder="@email.com" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Get all DOM ELEMENTS //
+
+const toggle = document.getElementById('toggle');
+const open = document.getElementById('open');
+const close = document.getElementById('close');
+const modal = document.getElementById('modal');
+
+// Get addListener elements //
+// toggle the nav //
+
+toggle.addEventListener('click', () =>
+     document.body.classList.toggle('show-nav')  
+);
+
+// show the Modal //
+
+open.addEventListener('click', () => 
+     modal.classList.add('show-modal')
+);
+
+// Close the Modal //
+
+close.addEventListener('click', () => 
+     modal.classList.remove('show-modal')
+);
+
+// close the modal on click //
+
+window.addEventListener('click', e =>
+     e.target === modal ? modal.classList.remove('show-modal'): false
+
+);
+      (function(d){
+         var s = d.createElement("script");
+         /* uncomment the following line to override default position*/
+         /* s.setAttribute("data-position", 1);*/
+         /* uncomment the following line to override default size (values: small, large)*/
+         /* s.setAttribute("data-size", "large");*/
+         /* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+         /* s.setAttribute("data-language", "null");*/
+         /* uncomment the following line to override color set via widget (e.g., #053f67)*/
+         /* s.setAttribute("data-color", "#2d68ff");*/
+         /* uncomment the following line to override type set via widget (1=person, 2=chair, 3=eye, 4=text)*/
+         /* s.setAttribute("data-type", "1");*/
+         /* s.setAttribute("data-statement_text:", "Our Accessibility Statement");*/
+         /* s.setAttribute("data-statement_url", "http://www.example.com/accessibility";*/
+         /* uncomment the following line to override support on mobile devices*/
+         /* s.setAttribute("data-mobile", true);*/
+         /* uncomment the following line to set custom trigger action for accessibility menu*/
+         /* s.setAttribute("data-trigger", "triggerId")*/
+         s.setAttribute("data-account", "pANdVia20c");
+         s.setAttribute("src", "https://cdn.userway.org/widget.js");
+         (d.body || d.head).appendChild(s);})(document)
+ </script>
+<noscript>
+Please ensure Javascript is enabled for purposes of 
+<a href="https://userway.org">website accessibility</a>
+
+</script>
+</html>
